@@ -1,39 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-  <title>第一週練習</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
-<body>
-  <div class="hw0">
-    <h3>Hw0 終極密碼 </h3>
-    <input class="num" type="number" name="num">
-    <button id="send">按鈕</button>
-    <div>
-      <span class="min">0</span>~
-      <span class="max">100</span>
-    </div>
-  </div>
-  <hr>
-  <div class="hw1">
-    <h3>Hw1 字串合併</h3>
-    <input type="text" class="s1">
-    <input type="text" class="s2">
-    <button id="merge">按鈕</button>
-    <div class="mergeRes"></div>
-  </div>
-  <hr>
-  <div class="hw1">
-    <h3>Hw2 判斷大小</h3>
-    <input type="text" class="n1">
-    <input type="text" class="n2">
-    <button id="condition">按鈕</button>
-    <div class="conRes"></div>
-  </div>
-
-  <script>
-    $(function() {
+<!DOCTYPE html><html><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"><title>第一週練習</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script></head><body><div class="hw0"><h3>Hw0 終極密碼</h3><input class="num" type="number" name="num"> <button id="send">按鈕</button><div><span class="min">0</span>~ <span class="max">100</span></div></div><hr><div class="hw1"><h3>Hw1 字串合併</h3><input type="text" class="s1"> <input type="text" class="s2"> <button id="merge">按鈕</button><div class="mergeRes"></div></div><hr><div class="hw1"><h3>Hw2 判斷大小</h3><input type="text" class="n1"> <input type="text" class="n2"> <button id="condition">按鈕</button><div class="conRes"></div></div><script>$(function() {
       pass = 70;
       $('#send').click(function() {
         var now = parseInt($('.num').val());
@@ -85,7 +50,4 @@
           $('.conRes').text(n1 + '等於' + n2);
         }
       });
-    });
-  </script>
-</body>
-</html>
+    });</script></body></html>
