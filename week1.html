@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>第一週練習</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="hw0">
+    <h3>Hw0 終極密碼 </h3>
+    <input class="num" type="number" name="num">
+    <button id="send">按鈕</button>
+    <div>
+      <span class="min">0</span>~
+      <span class="max">100</span>
+    </div>
+  </div>
+  <hr>
+  <div class="hw1">
+    <h3>Hw1 字串合併</h3>
+    <input type="text" class="s1">
+    <input type="text" class="s2">
+    <button id="merge">按鈕</button>
+    <div class="mergeRes"></div>
+  </div>
+  <hr>
+  <div class="hw1">
+    <h3>Hw2 判斷大小</h3>
+    <input type="text" class="n1">
+    <input type="text" class="n2">
+    <button id="condition">按鈕</button>
+    <div class="conRes"></div>
+  </div>
+
+  <script>
+    $(function() {
+      pass = 70;
+      $('#send').click(function() {
+        var now = parseInt($('.num').val());
+        var min = parseInt($('.min').text());
+        var max = parseInt($('.max').text());
+
+        if(now > 100) 
+          alert('不可以輸入超過100');
+        
+        if(now == pass) {
+          alert('您猜中了！');
+          return false;
+        } 
+
+        if(now >= min && now < pass) {
+          $('.min').text(now);
+        } else if(now <= max ) {
+          $('.max').text(now);
+        } else {
+          alert('不在範圍內');
+        }
+      });
+
+      $('#merge').click(function() {
+        var s1 = $('.s1').val();
+        var s2 = $('.s2').val();
+
+        $('.mergeRes').text(s1 + s2);
+      });
+
+      $('#condition').click(function() {
+        var n1 = $('.n1').val();
+        var n2 = $('.n2').val();
+
+        if(!n1 || !n2) {
+          alert('必需輸入數值才可比較');
+          return false;
+        }
+        if(!$.isNumeric(n1) || !$.isNumeric(n2)) {
+          alert('必需輸入數字才可比較');
+          return false;
+        }
+
+        if(n1 > n2) {
+          $('.conRes').text(n1 + '大於' + n2);
+        } else if(n1 < n2) {
+          $('.conRes').text(n1 + '小於' + n2);
+        } else {
+          $('.conRes').text(n1 + '等於' + n2);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
