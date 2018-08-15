@@ -83,7 +83,7 @@ html {
           a:nth-child(#{$i}) {
             left: 100% * ($i - $j);
           }
-        }
+        } 
       }
     }
   }
