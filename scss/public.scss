@@ -35,7 +35,7 @@ html {
     font-family: Hack, Roboto, RobotoDraft, Helvetica, Arial, sans-serif, "微軟正黑體", "Microsoft JhengHei";
 
     
-    background-color: RGBA(248, 233, 219, 1.00);
+    // background-color: RGBA(248, 233, 219, 1.00);
 
     @include font-smoothing(antialiased);
     h1 {
@@ -101,21 +101,41 @@ html {
     }
   }
 }
-// .week {
-//   display: block;
-//   width: 300px;
-//   height: 50px;
-//   background-color: rgba(224, 120, 112, 1.00);
-//   color: white;
-//   font-size: 20px;
-//   border: none;
-//   text-decoration: none;
-//   @include border-radius(30px);
-//   @include box-shadow(2px 4px 4px 0 rgba(0,0,0,0.1));
-//   margin-left: 30px;
-//   margin-bottom: 30px;
-//   &:hover {
-//     cursor: pointer;
-//     background-color: rgba(230, 156, 152, 1.00);
-//   }
-// }
+
+.container {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+
+  .box {
+    position: absolute;
+    display: inline-block;
+    background-color: RGBA(220, 220, 220, 1.00);
+    left: -100%;
+    top: 0;
+
+    .banner {
+      display: inline-block;
+      > * {
+        display: inline-block;
+        float: left;
+        width: 50px;
+        height: 50px;
+      }
+      a {
+        text-decoration: none;
+        color: red;
+      }
+    }
+  }
+}
+button {
+  display: inline-block;
+  margin-top:20px;
+}
+
+
+
+
